@@ -1,0 +1,4 @@
+flask
+Flask
+flask_mysqldb
+virtualenv

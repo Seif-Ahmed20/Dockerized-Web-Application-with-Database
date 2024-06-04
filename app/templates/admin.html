@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    
+</head>
+<body>
+    <h1>Students Dashboard</h1>
+    <table id="students-table">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>CGPA</th>
+                <th>Credit Hours</th>
+                <th>Username</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in data %}
+            <tr>
+                <td> {{ student[0] }} </td>
+                <td>{{ student[1] }}</td>
+                <td>{{ student[2] }}</td>
+                <td>{{ student[3] }}</td>
+                <td>{{ student[4] }}</td>
+                
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+        <button onclick="location.href = '/add';" name = "add" form = "addstudent">ADD Student</button>
+        <br>
+    
+
+        <button onclick="location.href = '/delete';" name = "delete" >DELETE Student</button>
+        <br>
+
+        <button onclick="location.href = '/update';" name = "update" form = "updatestudent">Update Student</button>
+        <br>
+        <button onclick="location.href = '/';" name = "update" form = "updatestudent">Logout</button>
+        <br>
+    </form>
+   
+</html>
